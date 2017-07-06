@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 3.4'
+gem "middleman-livereload", "~> 3.4.3"
 
 # Deploy to GitHub Pages
 gem 'middleman-deploy', '~> 1.0'
