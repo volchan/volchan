@@ -1,42 +1,11 @@
 ---
-title: Volchan - Freelence web developper
+title: Volchan - Freelance web developer
 ---
 
 <div class="site">
   <div class="site-banner">
     <%= inline_svg('volchan', class: 'logo') %>
     <h1 class="no-margin light-font">STEPHANE DE LA TORRE</h1>
-    <h2 class="no-margin light-font">FREELENCE WEB DEVELOPPER</h2>
+    <h2 class="no-margin light-font">FREELANCE WEB DEVELOPER</h2>
   </div>
 </div>
-
-<% content_for :after_js do %>
-  <script type="text/javascript">
-    jQuery('volchan.svg').each(function(){
-      var $img = jQuery(this);
-      var imgID = $img.attr('id');
-      var imgClass = $img.attr('class');
-      var imgURL = $img.attr('src');
-
-      jQuery.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = jQuery(data).find('svg');
-
-        // Add replaced image's ID to the new SVG
-        if(typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID);
-        }
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-      }, 'xml');
-    });
-  </script>
-<% end %>
