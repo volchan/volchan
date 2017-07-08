@@ -3,9 +3,45 @@ title: Volchan - Freelance web developer
 ---
 
 <div class="site">
-  <div class="site-banner">
-    <%= inline_svg('volchan', class: 'logo') %>
-    <h1 class="no-margin light-font">STEPHANE DE LA TORRE</h1>
-    <h2 class="no-margin light-font">FREELANCE WEB DEVELOPER</h2>
+  <div class="site-navbar">
+    <%= link_to 'Home', '#home', class: 'tab active' %>
+    <%= link_to 'About me', '#about-me', class: 'tab' %>
+    <%= link_to 'My skills', '#my-skills', class: 'tab' %>
+    <%= link_to 'Contact', '#contact-me', class: 'tab' %>
   </div>
+  <div class="site-content">
+    <div class="site-content-banner" id="home">
+      <%= inline_svg('volchan', class: 'logo') %>
+      <h1 class="no-margin light-font">STEPHANE DE LA TORRE</h1>
+      <h2 class="no-margin light-font">FREELANCE WEB DEVELOPER</h2>
+    </div>
+    <div class="site-content-about" id="about-me">
+      qlkzhdlqkjhd
+    </div>
+    <div class="site-content-skills" id="my-skills">
+      mqklziuhydpmqkhzd
+    </div>
+    <div class="site-content-contact" id="contact-me">
+      <form class="form" id="contactform" action="//formspree.io/contact@volchan.fr" method="POST">
+        <fieldset class="field">
+            <input class="input" type="text" name="name" placeholder="Name" required>
+            <label class="label" for="name"><span class="label-content">Your name</span></label>
+        </fieldset>
+        <fieldset class="field">
+            <input class="input" type="email" name="_replyto" placeholder="example@domain.com" required>
+            <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
+        </fieldset>
+        <fieldset class="field">
+            <textarea class="input" name="message" rows="1" placeholder="Message" required></textarea>
+            <label class="label" for="message"><span class="label-content">Your message</span></label>
+        </fieldset>
+        <input class="hidden" type="text" name="_gotcha" style="display:none">
+        <input class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
+        <fieldset class="field">
+            <input class="button submit" type="submit" value="Send">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <a href="https://github.com/volchan"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 </div>
