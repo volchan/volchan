@@ -8,7 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <% this_url = "http://www.volchan.fr" %>
+    <% title = current_page.data.title %>
+
     <title><%= current_page.data.title || "The Middleman" %></title>
+
+    <meta property="og:site_name" content="Volchan's landing page" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:url" content="<%= this_url %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.volchan.fr/images/og-img.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@volchantv" />
+    <meta name="twitter:creator" content="@volchantv" />
+    <meta name="twitter:title" content="<%= title %>" />
+    <meta name="twitter:image" content="http://www.volchan.fr/images/og-img.png" />
 
     <%= stylesheet_link_tag "all" %>
     <%= favicon_tag 'images/favicon.png' %>
