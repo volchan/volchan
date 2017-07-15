@@ -15,10 +15,10 @@ $(document).on('ready', function() {
     scroll_to_anchor($(this).attr("href"));
   });
 
-  var topMenu = $(".navbar"),
-  topMenuHeight = topMenu.outerHeight() + 20,
-  menuItems = topMenu.find("a"),
-  scrollItems = menuItems.map(function(){
+  var topMenu = $(".navbar");
+  var topMenuHeight = topMenu.outerHeight() + 20;
+  var menuItems = topMenu.find("a");
+  var scrollItems = menuItems.map(function(){
     var item = $($(this).attr("href"));
     if (item.length) { return item; }
   });
@@ -31,7 +31,7 @@ $(document).on('ready', function() {
       return this;
     });
 
-    cur = cur[cur.length-1];
+    var cur = cur[cur.length-1];
     var id = cur && cur.length ? cur[0].id : "";
     menuItems.removeClass("active");
     $('#' + id + '-tab').addClass("active");
