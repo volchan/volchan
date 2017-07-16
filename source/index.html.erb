@@ -18,44 +18,92 @@ title: Volchan - Freelance web developer
 </div>
 <div class="skills container" id="my-skills">
   <div class="row">
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/ruby-code.png');">
+          <%= image_tag 'ruby-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="ruby">Ruby</h3>
+          <p>Ruby is the language that revealed my passion for web development. It is pretty easy to understand it because it can almost be read it like a book.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(236, 22, 34,0.6) 0%, rgba(236, 22, 34,0.1) 75%), url('images/rails-code.png');">
+          <%= image_tag 'rails-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="rails">Ruby on Rails</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(228, 77, 38,0.6) 0%, rgba(228, 77, 38,0.1) 75%), url('images/html5-code.png');">
+          <%= image_tag 'html5-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="html">HTML 5</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(27, 115, 186,0.6) 0%, rgba(27, 115, 186,0.1) 75%), url('images/css3-code.png');">
+          <%= image_tag 'css3-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="css">CSS 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(238, 199, 37,0.6) 0%, rgba(238, 199, 37,0.1) 75%), url('images/js-code.png');">
+          <%= image_tag 'js-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="js">JavaScript</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-      <div class="skill-card"></div>
+    <div class="col-sm-6 col-md-4">
+      <div class="skill-card">
+        <div class="skill-card-code" style="background-image: linear-gradient(0deg, rgba(16, 104, 173,0.6) 0%, rgba(16, 104, 173,0.1) 75%), url('images/jq-code.png');">
+          <%= image_tag 'jq-logo.png', class: 'skill-card-code-logo' %>
+        </div>
+        <div class="skill-card-text">
+          <h3 id="jq">jQuery</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div class="contact" id="contact-me">
   <form class="form" id="contactform" action="//formspree.io/contact@volchan.fr" method="POST">
     <fieldset class="field">
-        <input class="input" type="text" name="name" placeholder="Name" required>
-        <label class="label" for="name"><span class="label-content">Your name</span></label>
+      <input class="input" type="text" name="name" placeholder="Name" required>
+      <label class="label" for="name"><span class="label-content">Your name</span></label>
     </fieldset>
     <fieldset class="field">
-        <input class="input" type="email" name="_replyto" placeholder="example@domain.com" required>
-        <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
+      <input class="input" type="email" name="_replyto" placeholder="example@domain.com" required>
+      <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
     </fieldset>
     <fieldset class="field">
-        <textarea class="input" name="message" rows="1" placeholder="Message" required></textarea>
-        <label class="label" for="message"><span class="label-content">Your message</span></label>
+      <textarea class="input" name="message" rows="1" placeholder="Message" required></textarea>
+      <label class="label" for="message"><span class="label-content">Your message</span></label>
     </fieldset>
     <input class="hidden" type="text" name="_gotcha" style="display:none">
     <input class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
     <fieldset class="field">
-        <input class="button submit" type="submit" value="Send">
+      <input class="button submit" type="submit" value="Send">
     </fieldset>
   </form>
 </div>
