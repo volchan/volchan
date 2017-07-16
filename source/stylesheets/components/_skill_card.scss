@@ -7,21 +7,29 @@
   box-shadow: 0 1px 1px 1px rgba(51, 51, 51, 0.25);
   border-radius: 4px;
   &-code {
-    flex: 7;
+    flex: 7.5;
     position: relative;
     background-size: cover;
     border-radius: 4px 4px 0 0;
-    border-bottom: 4px solid #ec1622;
     box-shadow: 0 1px 1px 1px rgba(51, 51, 51, 0.25);
-    &-logo {
-      bottom: -50px;
-      left: calc(50% - 50px);
+    &-logo{
       position: absolute;
-      width: 100px;
+      bottom: -45px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-img {
+        width: 70px;
+      }
+      h3 {
+        margin: 0;
+        margin-top: -10px;
+      }
     }
   }
   &-text {
-    flex: 3;
+    flex: 2.5;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -30,32 +38,11 @@
     font-size: 12px;
     text-align: center;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-    background-color: #f3f3f3;
+    background-color: #fff;
     border-radius: 0 0 4px 4px;
-    h3 {
-      margin: 0;
-    }
     p {
       margin: 0;
       margin-top: 5px;
-    }
-    #ruby {
-      color: #ec1622;
-    }
-    #rails {
-      color: #ec1622;
-    }
-    #html {
-      color: #e44d26;
-    }
-    #css {
-      color: #1b73ba;
-    }
-    #js {
-      color: #efc725;
-    }
-    #jq {
-      color: #1069ae;
     }
   }
 }
