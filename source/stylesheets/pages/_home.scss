@@ -74,9 +74,10 @@ body {
 }
 
 .skills {
-  height: auto;
+  min-height: $div-height;
   width: 100%;
   margin-top: 70px;
+  padding: 30px;
 }
 
 .contact {
