@@ -1,21 +1,22 @@
 //= require jquery
-//= require bootstrap-sprockets
+//= require materialize
 //= require_tree .
 
 $(document).on('ready', function() {
   function scroll_to_anchor(anchor_id){
     var tag = $(anchor_id);
-    $('body').animate({scrollTop: tag.offset().top - 70},'slow');
+    console.log(anchor_id);
+    $('html, body').animate({scrollTop: tag.offset().top - 70},'slow');
   };
 
-  $(".tab").on("click", function(e){
-    $(".tab").removeClass('active');
-    $(this).addClass('active');
+  $(".nav-tab").on("click", function(e){
+    // $(".nav-tab").removeClass('active');
+    // $(this).addClass('active');
     e.preventDefault();
     scroll_to_anchor($(this).attr("href"));
   });
 
-  var topMenu = $(".navbar");
+  var topMenu = $(".site-navbar");
   var topMenuHeight = topMenu.outerHeight() + 20;
   var menuItems = topMenu.find("a");
   var scrollItems = menuItems.map(function(){

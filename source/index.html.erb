@@ -2,121 +2,157 @@
 title: Volchan - Freelance web developer
 ---
 
-<div class="navbar">
-  <%= link_to 'Home', '#home', id: 'home-tab', class: 'tab active' %>
-  <%= link_to 'About me', '#about-me', id: 'about-me-tab', class: 'tab' %>
-  <%= link_to 'My skills', '#my-skills', id: 'my-skills-tab', class: 'tab' %>
-  <%= link_to 'Contact', '#contact-me', id: 'contact-me-tab', class: 'tab' %>
+<div class="site-navbar">
+  <%= link_to 'Home', '#home', id: 'home-tab', class: 'nav-tab active' %>
+  <%= link_to 'About me', '#about-me', id: 'about-me-tab', class: 'nav-tab' %>
+  <%= link_to 'My skills', '#my-skills', id: 'my-skills-tab', class: 'nav-tab' %>
+  <%= link_to 'Contact', '#contact-me', id: 'contact-me-tab', class: 'nav-tab' %>
 </div>
 <div class="banner" id="home">
   <%= inline_svg('volchan', class: 'logo') %>
   <h1 class="no-margin light-font">STEPHANE DE LA TORRE</h1>
   <h2 class="no-margin light-font">FREELANCE WEB DEVELOPER</h2>
 </div>
-<div class="about container" id="about-me">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
-<div class="skills container" id="my-skills">
+<div class="about container valign-wrapper" id="about-me">
   <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #ec1622; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/ruby-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'ruby-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m10 offset-m1 l10 offset-l1">
+      <div class="about-content">
+        <div class="about-content-text">
+          <p>Hey there,</p>
+          <p>
+            My name is Stéphane, I'm passionate about computers and tech,
+            on april 2017 I intended <a href="https://www.lewagon.com" target="_blank">LeWagon</a> coding bootcamp at Bordeaux,
+            this was one of the best experiences in my life,
+            it revealed this true love and pasion for web development and web technologies that motivates me to be a freelance web developer.
+          </p>
+          <p>Since then I want to spend all my time building web solutions to a variety of problematics.</p>
+          <p>I also have an inexhaustible thirst for knowledge, i'm always looking forward to learn new things to grow my stack.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="skills container valign-wrapper" id="my-skills">
+  <div class="row">
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #ec1622; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'ruby-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'ruby-logo.png', class: 'card-code-logo-img' %>
             <h3 id="ruby">Ruby</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>Ruby is the language that revealed my passion for web development. It is pretty easy to understand it because it can almost be read it like a book.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #ec1622; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/rails-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'rails-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #ec1622; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'rails-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'rails-logo.png', class: 'card-code-logo-img' %>
             <h3 id="rails">Ruby on Rails</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>A ruby framework that includes everything needed to create web applications according to the Model-View-Controller (MVC) pattern.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #e44d26; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/html5-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'html5-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #e44d26; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'html5-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'html5-logo.png', class: 'card-code-logo-img' %>
             <h3 id="html">HTML 5</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>Our good old friend HTML, mixed with some Ruby it can do really awesome things.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #1b73ba; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/css3-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'css3-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #1b73ba; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'css3-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'css3-logo.png', class: 'card-code-logo-img' %>
             <h3 id="css">CSS 3</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>I use the CSS SASS preprocessor with SCSS syntax that allows greater possibilities like the usage of variables and nested selectors.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #efc725; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/js-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'js-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #efc725; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'js-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'js-logo.png', class: 'card-code-logo-img' %>
             <h3 id="js">JavaScript</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>I love JS because it allows us to do some awesome animations, give a lot of life onto a web page and a whole lot more.</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="skill-card">
-        <div class="skill-card-code" style="border-bottom: 4px solid #1069ae; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('images/jq-code.png');">
-          <div class="skill-card-code-logo">
-            <%= image_tag 'jq-logo.png', class: 'skill-card-code-logo-img' %>
+    <div class="col s12 m6 l4">
+      <div class="card small">
+        <div class="card-code" style="border-bottom: 4px solid #1069ae; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 75%), url('<%= image_path 'jq-code.png' %>');">
+          <div class="card-code-logo">
+            <%= image_tag 'jq-logo.png', class: 'card-code-logo-img' %>
             <h3 id="jq">jQuery</h3>
           </div>
         </div>
-        <div class="skill-card-text">
+        <div class="card-text">
           <p>jQuery makes the HTML dom manipulation really easy and powerfull.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="contact" id="contact-me">
-  <form class="form" id="contactform" action="//formspree.io/contact@volchan.fr" method="POST">
-    <fieldset class="field">
-      <input class="input" type="text" name="name" placeholder="Name" required>
-      <label class="label" for="name"><span class="label-content">Your name</span></label>
-    </fieldset>
-    <fieldset class="field">
-      <input class="input" type="email" name="_replyto" placeholder="example@domain.com" required>
-      <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
-    </fieldset>
-    <fieldset class="field">
-      <textarea class="input" name="message" rows="1" placeholder="Message" required></textarea>
-      <label class="label" for="message"><span class="label-content">Your message</span></label>
-    </fieldset>
-    <input class="hidden" type="text" name="_gotcha" style="display:none">
-    <input class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
-    <fieldset class="field">
-      <input class="button submit" type="submit" value="Send">
-    </fieldset>
-  </form>
+<div class="contact valign-wrapper" id="contact-me">
+  <div class="container">
+    <div class="row">
+      <form class="col s12" action="//formspree.io/contact@volchan.fr" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate" name="first-name" required>
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" name="last-name" required>
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate" name="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="phone" type="text" class="validate" name="phone">
+            <label for="phone">Phone</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" name="message" required></textarea>
+            <label for="textarea1">Your message</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <button class="btn waves-effect waves-light" type="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 <a id="gh-fork" href="https://github.com/volchan" target="_blank"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 1001;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
