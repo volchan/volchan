@@ -1,5 +1,6 @@
 //= require jquery
 //= require materialize
+//= require jquery-validation
 //= require_tree .
 
 $(document).on('ready', function() {
@@ -10,8 +11,6 @@ $(document).on('ready', function() {
   };
 
   $(".nav-tab").on("click", function(e){
-    // $(".nav-tab").removeClass('active');
-    // $(this).addClass('active');
     e.preventDefault();
     scroll_to_anchor($(this).attr("href"));
   });
@@ -36,5 +35,46 @@ $(document).on('ready', function() {
     var id = cur && cur.length ? cur[0].id : "";
     menuItems.removeClass("active");
     $('#' + id + '-tab').addClass("active");
-  })
+  });
+
+  $("#contact-form").validate({
+    errorElement : 'div',
+    errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      console.log(placement);
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+  });
+
+  $("#submit-btn").click(function(e){
+    e.preventDefault();
+    if ($('#contact-form').valid()) {
+      $.ajax({
+        type: "post",
+        url: "//formspree.io/contact@volchan.fr",
+        dataType: 'json',
+        data: $('#contact-form').serialize(),
+        beforeSend: function() {
+          $('.submit-container-sending').remove();
+          $('.progress').remove();
+    			$('.submit-container').append('<div class="submit-container-sending"><p>Sending your message...</p></div>');
+    			$('.submit-container').append('<div class="progress"><div class="indeterminate"></div></div>');
+    		},
+    		success: function(data) {
+    			$('.submit-container-sending').remove();
+          $('.progress').remove();
+          $('.submit-container').append('<div class="submit-container-sending"><p>Message sent, Thank You !</p></div>');
+          $('.submit-container').append('<div class="progress"><div class="determinate" style="width: 100%"></div></div>');
+          $('#submit-btn').css('background-color', '#4CAF50').text('Sent');
+          $('.determinate').css('background-color', '#4CAF50').text('Sent');
+    		},
+    		error: function(err) {
+    		}
+      })
+    }
+  });
 })
