@@ -18,15 +18,17 @@ title: Volchan - Freelance web developer
     <div class="col s12 m10 offset-m1 l10 offset-l1">
       <div class="about-content">
         <div class="about-content-text">
-          <p>Hey there,</p>
-          <p>
-            My name is Stéphane, I'm passionate about computers and tech,
-            on april 2017 I intended <a href="https://www.lewagon.com" target="_blank">LeWagon</a> coding bootcamp at Bordeaux,
-            this was one of the best experiences in my life,
-            it revealed this true love and pasion for web development and web technologies that motivates me to be a freelance web developer.
-          </p>
-          <p>Since then I want to spend all my time building web solutions to a variety of problematics.</p>
-          <p>I also have an inexhaustible thirst for knowledge, i'm always looking forward to learn new things to grow my stack.</p>
+          <blockquote>
+            <p>Hey there,</p>
+            <p>
+              My name is Stéphane, I'm passionate about computers and tech,
+              on april 2017 I intended <a href="https://www.lewagon.com" target="_blank">LeWagon</a> coding bootcamp at Bordeaux,
+              this was one of the best experiences in my life,
+              it revealed this true love and pasion for web development and web technologies that motivates me to be a freelance web developer.
+            </p>
+            <p>Since then I want to spend all my time building web solutions to a variety of problematics.</p>
+            <p>I also have an inexhaustible thirst for knowledge, i'm always looking forward to learn new things to grow my stack.</p>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -42,7 +44,7 @@ title: Volchan - Freelance web developer
             <h3 id="ruby">Ruby</h3>
           </div>
         </div>
-        <div class="card-text">
+        <div class="card-text flow-text">
           <p>Ruby is the language that revealed my passion for web development. It is pretty easy to understand it because it can almost be read it like a book.</p>
         </div>
       </div>
@@ -55,7 +57,7 @@ title: Volchan - Freelance web developer
             <h3 id="rails">Ruby on Rails</h3>
           </div>
         </div>
-        <div class="card-text">
+        <div class="card-text flow-text">
           <p>A ruby framework that includes everything needed to create web applications according to the Model-View-Controller (MVC) pattern.</p>
         </div>
       </div>
@@ -68,7 +70,7 @@ title: Volchan - Freelance web developer
             <h3 id="html">HTML 5</h3>
           </div>
         </div>
-        <div class="card-text">
+        <div class="card-text flow-text">
           <p>Our good old friend HTML, mixed with some Ruby it can do really awesome things.</p>
         </div>
       </div>
@@ -81,7 +83,7 @@ title: Volchan - Freelance web developer
             <h3 id="css">CSS 3</h3>
           </div>
         </div>
-        <div class="card-text">
+        <div class="card-text flow-text">
           <p>I use the CSS SASS preprocessor with SCSS syntax that allows greater possibilities like the usage of variables and nested selectors.</p>
         </div>
       </div>
@@ -94,8 +96,8 @@ title: Volchan - Freelance web developer
             <h3 id="js">JavaScript</h3>
           </div>
         </div>
-        <div class="card-text">
-          <p>I love JS because it allows us to do some awesome animations, give a lot of life onto a web page and a whole lot more.</p>
+        <div class="card-text flow-text">
+          <p>I love JS because it allows us to do some animations, give a lot of life to a web page and a whole lot more.</p>
         </div>
       </div>
     </div>
@@ -107,48 +109,56 @@ title: Volchan - Freelance web developer
             <h3 id="jq">jQuery</h3>
           </div>
         </div>
-        <div class="card-text">
+        <div class="card-text flow-text">
           <p>jQuery makes the HTML dom manipulation really easy and powerfull.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="contact valign-wrapper" id="contact-me">
+<div class="contact valign-wrapper" id="contact-me" action="https://getsimpleform.com/messages/ajax?form_api_token=81c20e2421a19a7b81049ce168b96dad" method="POST">
   <div class="container">
     <div class="row">
-      <form class="col s12" action="//formspree.io/contact@volchan.fr" method="POST">
+      <form class="col s12" id="contact-form">
         <div class="row">
           <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate" name="first-name" required>
-            <label for="first_name">First Name</label>
+            <input id="fname" type="text" name="first-name" data-error=".errorTxt1" required>
+            <label for="fname">First Name <span class="required">*</span></label>
+            <div class="errorTxt1"></div>
           </div>
           <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate" name="last-name" required>
-            <label for="last_name">Last Name</label>
+            <input id="lname" type="text" name="last-name" data-error=".errorTxt2" required>
+            <label for="lname">Last Name <span class="required">*</span></label>
+            <div class="errorTxt2"></div>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input id="email" type="email" class="validate" name="email" required>
-            <label for="email">Email</label>
+            <input id="email" type="email" name="email" data-error=".errorTxt3" required>
+            <label for="email">Email <span class="required">*</span></label>
+            <div class="errorTxt3"></div>
           </div>
           <div class="input-field col s6">
-            <input id="phone" type="text" class="validate" name="phone">
+            <input id="phone" type="text" name="phone" data-error=".errorTxt4">
             <label for="phone">Phone</label>
+            <div class="errorTxt4"></div>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea" name="message" required></textarea>
-            <label for="textarea1">Your message</label>
+            <textarea id="textarea1" class="materialize-textarea" name="message" data-error=".errorTxt5" required></textarea>
+            <label for="textarea1">Your message <span class="required">*</span></label>
+            <div class="errorTxt5"></div>
           </div>
         </div>
         <div class="row">
-          <div class="col s12">
-            <button class="btn waves-effect waves-light" type="submit">Submit
+          <div class="col s4 m2" style="height: 100%;">
+            <button class="btn waves-effect waves-light" id="submit-btn" type="submit">Submit
               <i class="material-icons right">send</i>
             </button>
+          </div>
+          <div class="col s8 m4">
+            <div class="submit-container"></div>
           </div>
         </div>
       </form>
