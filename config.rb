@@ -9,6 +9,7 @@
 
 # Auto-prefixing of CSS code with vendor prefix
 activate :autoprefixer
+activate :livereload
 
 ###
 # Page options, layouts, aliases and proxies

@@ -32,6 +32,21 @@
   font-weight: 300;
 }
 
+.error {
+  font-size: 0.8rem;
+  margin-top: -18px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.required {
+  color: $brand-color;
+}
+
+.not-displayed {
+  display: none;
+}
+
 #ruby {
   color: #ec1622;
 }
