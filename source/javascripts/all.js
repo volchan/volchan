@@ -37,13 +37,20 @@ $(document).on('ready', function() {
     $('#' + id + '-tab').addClass("active");
   });
 
+  $.validator.addMethod('validatePhone', function (value, element) {
+    return this.optional(element) || /^(\+\d{2,3}|\d{2})(\s\d)?(((\s|\W)?\d{2})?){4}$/.test(value);
+  }, "Please enter a valid phone number");
+
   $("#contact-form").validate({
+    rules : {
+      phone: 'validatePhone'
+    },
     errorElement : 'div',
     errorPlacement: function(error, element) {
       var placement = $(element).data('error');
       console.log(placement);
       if (placement) {
-        $(placement).append(error)
+        $(placement).append(error);
       } else {
         error.insertAfter(element);
       }
