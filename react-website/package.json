@@ -12,10 +12,11 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn watch:css && react-scripts start",
+    "build": "NODE_ENV=production yarn watch:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/index.css"
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +37,11 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9",
     "eslint": "^7.15.0",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint-plugin-react": "^7.21.5",
+    "postcss": "^7",
+    "postcss-cli": "^8.3.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

@@ -1,20 +1,9 @@
 import React from 'react';
 
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div className="antialiased text-gray-900 bg-gray-200 min-h-screen p-8 flex items-center justify-center">
+      <h1 className="text-red-500 text-6xl font-semibold">Hello World</h1>
     </div>
   );
 }
