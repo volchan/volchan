@@ -2,6 +2,7 @@
   "name": "react-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://volchan.github.io/volchan",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -21,7 +22,9 @@
     "build": "NODE_ENV=production yarn watch:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/index.css"
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/index.css",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,7 @@
     "autoprefixer": "^9",
     "eslint": "^7.15.0",
     "eslint-plugin-react": "^7.21.5",
+    "gh-pages": "^3.1.0",
     "postcss": "^7",
     "postcss-cli": "^8.3.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
